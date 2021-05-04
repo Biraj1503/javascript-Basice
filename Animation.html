@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background-color: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+
+}
+#animate1{
+	width:50px;
+	height:50px;
+	position:absolute;
+	background:pink;
+	margin-left:88%
+}
+</style>
+<body>
+
+<p><button onclick="myMove()">Click Me</button></p> 
+
+<div id ="container">
+  <div id ="animate"></div>
+  <div id ="animate1"></div>
+</div>
+
+<script>
+var id = null;
+var id1 = null;
+var color = false 
+function myMove() {
+  var elem = document.getElementById("animate");
+  var color = false;
+  var pos = 0;
+  var pos1=0;
+  clearInterval(id);
+  id = setInterval(frame, 5);
+  function frame() {
+    if(color=false){
+		elem.style.background='yellow'
+	}else{
+		color = true;
+		elem.style.background='red';
+		if (pos == 350) {
+      setInterval(animated, 5)
+      function animated(){
+        	 pos--
+             if(pos==0){
+             	clearInterval(id)
+             }
+      }
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px"; 
+    }
+  }
+		
+}
+  
+  var animate = document.getElementById('animate1')
+ id1=setInterval(ok,5)
+  function ok(){
+	if(pos1==350){
+		setInterval(ok1,10)
+		function ok1(){
+			pos1--
+			if(pos1==0){
+			clearInterval(id1)
+			}
+		}
+	}else{
+		pos1++;
+		animate.style.top = pos1 + 'px';
+		animate.style.right = pos1 + 'px'; 	
+	}
+  }
+}
+</script>
+
+</body>
+</html>

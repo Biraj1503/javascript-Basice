@@ -1,0 +1,53 @@
+
+<html>
+<body>
+
+<h2>JavaScript For Loop</h2>
+
+<p id="demo"></p>
+
+<script>
+let cars = ['BMW', 'Volvo', 'Saab', 'Ford', 'Fiat', 'Audi'];
+let text = '';
+let i;
+for (i = 0; i < cars.length; i++) {
+  text += cars[i];
+}
+document.getElementById("demo").innerHTML = text;
+
+let arr = [4,5,6,4,1]
+document.write(arr)
+for(let i = 0; i<arr.length; i++){
+	setTimeout(function(){
+		console.log(arr[i][0]="Biraj")
+	},2000)
+
+	setTimeout(function(){
+		document.write(arr[i][1]=[65])
+	},4000)	
+}
+	for(let j = 0; j<arr.length; i++){
+	setTimeout(function(){
+		console.log(arr[j][0]="Biraj")
+	},2000)
+
+	setTimeout(function(){
+		document.write(arr[j][1]=[65])
+	},4000)	
+}
+
+const sum = (a,b)=>a+b;
+const div = (a,b)=>a/b;
+const pro = (a,b)=>a*b;
+const min = (a,b)=>a-b;
+const fun = [sum,div,pro,min]
+console.log(typeof(fun))
+const a= 10
+const b = 20
+for(let i = 0; i<fun.length; i++){
+const result = fun[i](a,b)
+	console.log(result)
+}
+</script>
+</body>
+</html>

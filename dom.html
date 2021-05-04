@@ -1,0 +1,37 @@
+<html>
+	  <head>
+		<script>
+		   // run this function when the document is loaded
+		   window.onload = function() {
+
+			 // create a couple of elements in an otherwise empty HTML page
+			 const heading = document.createElement("h1");
+			 const heading_text = document.createTextNode("Big Head!");
+			 heading.appendChild(heading_text);
+			 document.body.appendChild(heading);
+			 
+			const para 	= document.createElement('p')
+			const para_Text = document.createTextNode("This Is Your Name:")
+			para.appendChild(para_Text)
+			document.body.appendChild(para)
+			
+			const h1 = document.createElement('h1')
+			const h1_Text=document.createTextNode('Name Is Replace')
+			h1.appendChild(h1_Text)	
+			const input = document.createElement('input')
+				input.type='text'
+				input.name='name'
+				input.placeholder='Nice'
+				input.onkeypress='my_function()'
+				document.body.appendChild(input)
+				document.body.replaceChild(h1,para)
+			function my_function(){
+				console.log(5656)	
+			}	
+		  }
+		  
+		</script>
+	  </head>
+	  <body>
+	  </body>
+</html>
