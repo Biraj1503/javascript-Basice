@@ -53,7 +53,7 @@ const fun = (matixA,matixB,matixc)=>{
 	return result
 }
 
-console.log(fun(matixA,matixB,matixc))
+//console.log(fun(matixA,matixB,matixc))
 
 let name = [
 	{name:"Biaraj",id:2},
@@ -61,7 +61,7 @@ let name = [
 	{name:"Rakib",id:4},
 	{name:[2],id:3}		
 ]
-console.log(name)
+//console.log(name)
 name.map(name=>console.log(name))
 
 let number = [1,2,3,4,5]
@@ -75,9 +75,9 @@ for (let i=0; i<number.length; i++){
 	sum +=number[i]
 }
 
-console.log(sum)
-console.log(sum/number.length)
-console.log(sum*number.length)
+//console.log(sum)
+//console.log(sum/number.length)
+//console.log(sum*number.length)
 
 let largestnumber = pointtabel[0]
 let secondlargestnumber = pointtabel[1]
@@ -88,9 +88,69 @@ for(let i = 1; i<pointtabel.length;i++){
 		secondlargestnumber=pointtabel[i]
 	}
 }
-console.log(largestnumber)
-console.log(secondlargestnumber)
+//console.log(largestnumber)
+//console.log(secondlargestnumber)*/
 /*index value
 	0	47 flase
 	1	95 flase
 	2	99 true */
+	
+
+let matixone = [
+	[1,14,15],
+	[2,15,16],
+	[3,16,17]
+]
+
+console.log(matixone[0][0])
+
+ for(i=0;i<matixone.length;i++){
+	console.log(matixone[i])
+}
+
+const func = ()=>{
+	
+	return {
+		
+		name:'abc'
+	}
+}
+
+console.log(typeof func())
+
+let names = ['biraj','Ballal','Shole'];
+let city = [
+	'Dhaka',
+	'Barishal',
+	'Chottogarm',
+	'Bogura',
+	'Sylet'
+];
+
+let dece =[]
+
+for(let i = 0; i<names.length;i++){
+	for(let x = 0; x<city.length;x++){
+		let card={Name:names[i],City:city[x]}
+		dece.push(card)
+	}
+}
+console.log(dece)
+
+const http = require('http')
+const os = require('os')
+console.log(os)
+const port = '3000'
+const hostname = '127.0.0.1';
+const server = http.createServer((req,res)=>{
+	res.statusCode = 200;
+	res.end('Hello World')
+	res.status(200).json({
+		name:'biarj'
+	})
+})
+
+server.listen(port,hostname,()=>{
+	console.log(`server Is Running on PORT: ${port} and hostname ${hostname}`)
+})
+console.log(http)

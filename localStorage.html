@@ -1,0 +1,44 @@
+<html>
+	  <head>
+	  <title>Data Set LOcalStorage</title>
+		<style>
+			
+		</style>
+		<script>
+		let obj = []
+			function myFunction(){
+			let add ={}
+			let name = document.getElementById('name').value
+			let email = document.getElementById('email').value
+			let age = document.getElementById('age').value
+			add.id=Date.now()
+			add.name=name
+			add.email=email
+			add.age=age
+			obj.push(add)
+			localStorage.setItem('names',JSON.stringify(obj))
+			location.reload()
+			return add
+			}
+			
+			let ok=localStorage.getItem('names')
+			let fine = JSON.parse(ok)
+			/*for(i=0;i<fine.length;i++){
+				document.getElementById('demo').innerHTML=fine[i].name+'/n'
+			}*/
+			fine.map(local=>{
+				document.write(local.name)
+			})
+			
+		</script>
+	  </head>
+	  <body>
+		<input type='text' id='name' value=''/>
+		<input type='email' id='email' value=''/>
+		<input type='number' id='age' value=''/>
+		<button onclick='myFunction()'>Submit</button>
+		<div class='demo'>
+		
+		</div>
+	  </body>
+</html>

@@ -1,0 +1,1 @@
+{"name":"Biraj Kumar Biswas","email":"toshebamail@gmail.com","phone":"01706151414","address":"Barishal","friendlist":["Shohel","Balla","Neyamul","Apu"],"education":[{"school":"Patherhat Jubli Institution","collage":"Infra Polytechine Institution,Barisal","university":"World University of Bangladesh,Dhaka"},{"ima":"java.png"}]}
