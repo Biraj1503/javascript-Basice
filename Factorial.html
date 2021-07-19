@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Methode</title>
+	</head>
+	<body>
+	<script>
+	
+		
+	function live(){
+		return {opration:1};
+	}
+	document.write(typeof live);
+	
+		var a = true; //1
+		var b = false; //0
+		var x = 5; 
+		var y = a+b;
+		var result = x-y;
+		document.write(result);
+		
+		var a = new String("live project");
+		var b =  String("live project");
+		console.log(a instanceof String);	
+		console.log(b instanceof String);
+		console.log(a);
+		console.log(b);
+		
+		var num = prompt("find the factorial ...."); 
+		
+		function factorial(n){
+			if(n==0){
+				return 1;
+			}else{
+			return	n*factorial(n-1);
+			}
+		}
+		document.write(factorial(num));
+	</script>
+		
+	</body>
+</html>

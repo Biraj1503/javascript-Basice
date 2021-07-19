@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>java</title>
+		<style>
+			body{font-family:arial;font-size:18px;background:#ddd;line-height:25px}
+			.content{background:#ddd;margin:0 auto;width:800px; max-height:900px}
+			.maincontent{background:white;margin:1px;min-height:450px;padding:5px  10px;color:black;}
+			.header,.footer{background:green;text-align:center;padding:10px;color:white;}
+			table{width:280px; margin:0 auto; border:18px solid #ddd;border-bottom-color:red;border-top-color:red;border-left-color:blue;border-right-color:blue; padding:11px;background-color:pink;color:green;margin-top:28px}
+			input[type="text"]{width:300px;font-size:17px}
+			input[type="button"]{width:120px;padding:10px;font-size:20px;margin:0px;color:white;background-color:grad;color:black;}
+			#showresult{width:300px;font-size:17px;height:200px}
+			
+		</style>
+	</head>
+	<body>
+		<section class="content">
+			<div class="header">
+				<script>
+					document.write("Name:Biraj kumar biswas")
+				</script>
+			</div>
+			<section class="maincontent">
+				<form name="myform"onSubmit="testCode()">
+					<table>
+						<tr>
+							<td><h1 style='font-weight:bold;font-family:arial'>select:</h1></td>
+							<td>
+								<input type="checkbox"name="chbox"value="JAVA"/>JAVA</br>
+								<input type="checkbox"name="chbox"value="PHP"/>PHP</br>
+								<input type="checkbox"name="chbox"value="CSS"/>CSS</br>
+								<input type="checkbox"name="chbox"value="Javascript"/>HML</br>
+								<input type="checkbox"name="chbox"value="c+"/>c+</br>
+								<input type="checkbox"name="chbox"value="c++"/>c++</br>
+								<input type="checkbox"name="chbox"value="Python"/>Python</br>
+								<input type="checkbox"name="chbox"value="Swift"/>Swift</br>
+								<input type="checkbox"name="chbox"value="Dart"/>Dart</br>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<input type="submit"value="submit"/>
+								<input type="reset"value="refres"/>
+							</td>
+						</tr>
+					</table>
+				</form>
+				<script type ="text/javascript">
+					function testCode(){
+						document.write("you select:"+selectedCode());
+					}
+					function selectedCode(){
+					var cd="<ul>";
+					var myvalue = document.myform.chbox;
+					for(i=0;i<myvalue.length;i++){
+					if(myvalue[i].checked){
+					cd+="<li>"+myvalue[i].value;
+					}
+					}
+					cd+="</ul>"
+					return cd;
+					}
+				</script>
+			</section>	
+			<div class="footer">
+				<script>document.write("Live Project")</script>
+			</div>
+			
+		</section>
+	</body>
+</html>

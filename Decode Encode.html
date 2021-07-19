@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Methode</title>
+	</head>
+	<body>
+	<script>
+		//var num = prompt("Find the Factorial num..");
+		function factorial(n){
+			if(n==0){
+				return 1;
+			}else{
+				product = 1;
+				for(i=1;i<=n;i++){
+				product*=i;
+				}
+				return product;
+				
+			}
+		}
+		//document.write(factorial(num));
+		
+		var x = "2+5";
+		document.write(eval(x));
+		
+		var str = "biraj kumar biswas";
+		var esc_str = escape(str);
+		document.write(esc_str);
+		document.write("<br/>");
+		document.write((unescape(esc_str)));
+		document.write("<br/>");
+		
+		
+		var str = "biraj kumar biswas";
+		var b64 = btoa(str);
+		var decode = atob(b64);
+		document.write(b64);
+		document.write("<br/>");
+		document.write(decode);
+		
+	</script>
+		
+	</body>
+</html>
+function myreg(){
+		var str ="biraj Rajib Kumar biswas"
+		var sr = str.search(/biswas/i);
+		document.getElementById("show").innerHTML = sr;
+		<button onclick="myreg"></button>
+		<div id="show"></div>
+		}
+		function myreg(){
+		var str =document.getElementById("ne").innerHTML;
+		var sr = str.replace("biraj","rajib");
+		document.getElementById("show").innerHTML = sr;
+		<button onclick="myreg"></button>
+		<div id="ne">biraj kumar biswas</div>
+		<div id="show"></div>
+		}
+		

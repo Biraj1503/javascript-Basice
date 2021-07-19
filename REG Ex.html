@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>java</title>
+		<style>
+			body{font-family:arial;font-size:18px;background:#ddd;line-height:25px}
+			.content{background:#ddd;margin:0 auto;width:800px; max-height:900px}
+			.maincontent{background:white;margin:1px;min-height:450px;padding:5px  10px;color:black;}
+			.header,.footer{background:green;text-align:center;padding:10px;color:white;}
+			table{width:280px; margin:0 auto; border:18px solid #ddd;border-bottom-color:red;border-top-color:red;border-left-color:blue;border-right-color:blue; padding:11px;background-color:pink;color:green;margin-top:28px}
+			input[type="text"]{width:300px;font-size:17px}
+			input[type="button"]{width:120px;padding:10px;font-size:20px;margin:0px;color:white;background-color:grad;color:black;}
+			#showresult{width:300px;font-size:17px;height:200px}
+			
+		</style>
+	</head>
+	<body>
+		<section class="content">
+			<div class="header">
+				<script>
+					document.write("Name:Biraj kumar biswas")
+				</script>
+			</div>
+			<section class="maincontent">
+				<form>
+					<table>
+						<tr>
+							<td>Input</td>
+							<td><input type="text"id="getvalue"/></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="button"value="check"onclick="getNumber()"/></td>
+						</tr>
+						<tr>
+							<td>Result</td>
+							<td><textarea id="showresult"></textarea></td>
+						</tr>
+					</table>
+				</form>
+				<script type ="text/javascript">
+					//mang-82 bann-967 apple-45687
+					//ABC567858xyz
+					//$12 $56 $98 $68 $8675
+					function getNumber(){
+						var getstring =document.getElementById("getvalue").value;
+						var result = getstring.match(/\d+/g);
+						for(var i =0;i<result.length;i++){
+						document.getElementById("showresult").value += result[i]+"\n";
+						}
+					}
+				</script>
+			</section>	
+			<div class="footer">
+				<script>document.write("Live Project")</script>
+			</div>
+			
+		</section>
+	</body>
+</html>
